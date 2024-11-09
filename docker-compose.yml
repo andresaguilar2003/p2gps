@@ -18,7 +18,7 @@ services: #ahora se indican los servicios por el orden en que se quiere que se i
     volumes: 
       - "db-data:/data/db" # para guardar en local los cambios en el contenedor 
   order: 
-    image: tusuarioDocker/p2gps:order 
+    image: andresaguilarpla/p2gps:order 
     depends_on: 
       - "mongo"  #le pasamos al servicio order la IP del servicio mongo 
     deploy: 
@@ -32,7 +32,7 @@ services: #ahora se indican los servicios por el orden en que se quiere que se i
     ports: 
       - "8080:8080" 
   web: 
-    image: tusuarioDocker/p2gps:web 
+    image: andresaguilarpla/p2gps:web 
     deploy: 
       replicas: 1 
       resources: 
