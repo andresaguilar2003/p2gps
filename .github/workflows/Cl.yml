@@ -79,4 +79,8 @@ jobs:
         with: 
           azcliversion: latest 
           inlineScript: | 
-            az webapp start --name p2gps --resource-group recursosGPS --settings WEBSITES_ENABLE_APP_SERVICE_STORAGE=TRUE
+            # Configura WEBSITES_ENABLE_APP_SERVICE_STORAGE
+            az webapp config appsettings set --name p2gps --resource-group recursosGPS --settings WEBSITES_ENABLE_APP_SERVICE_STORAGE=TRUE
+          
+            # Inicia la aplicación web
+            az webapp start --name p2gps --resource-group recursosGPS
