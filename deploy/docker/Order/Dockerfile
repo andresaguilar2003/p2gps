@@ -10,7 +10,7 @@ COPY drop/run.sh /usr/local/app/run.sh
  
 #cuando lancemos una pila de servicios con Docker, la ip de MongoDB no se puede  
 #descrubrir al menos que se la pasemos en un archivo de propiedades 
-COPY drop/application.properties /usr/local/app/application.properties 
+COPY drop/application.properties /application.properties
  
 EXPOSE 8080
  
